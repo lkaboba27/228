@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Я рот этого всего ебала</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h3>ГЛАВНАЯ РЕЦЕПТЫ О НАС</h3>
+
+    
+
+<h2>Добро пожаловать на</h2>
+
+<h1>Нашу кухню</h1>
+
+<h5>ДОМ ЛУЧШЕЙ ЕДЫ</h5>
+
+<h6>посмотреть меню</h6>
+
+<h4>Магическая Атмосфера</h4>
+<p>В наших рецептах царит магическая атмосфера наполненная вкусными ароматами!</p>
+
+<h4>Лучшее качество Съёмки</h4>
+<p>Качество нашей Съёмки - отменное!</p>
+
+<h4>Низкокалорийные Блюда</h4>
+<p>Калорийность нашей Еды зависит только от ее количества. Качество всегда на высоте!</p>
+
+<h2>Наша История</h2>
+<p>Идея сайта пришла нашей команде неожиданно. А всего-то требовалось пнуть нас, чтобы мы за две недели допилили сайт, который раньше и понятия не имели как создавать.
+Но вот мы здесь (ура)</p>
+
+<p>18+ 152 69</p>
+
+<p>Напитков Еда Закуски</p>
+
+<p>Наше меню рецептов</p>
+<button id="fetch-data1">Что там?</button>
+<button id="fetch-data2">Что там?</button>
+<button id="fetch-data3">Что там?</button>
+<div id="json-data"></div>
+
+<h4>Галерея Блюд</h4>
+<h3>Бедолаги</h3>
+
+
+
+<script>
+    let isDataVisible1 = false; 
+    let isDataVisible2 = false; 
+    let isDataVisible3 = false; 
+
+    function fetchData(url, setNumber) {
+        const jsonDataDiv = document.getElementById('json-data');
+
+        if (setNumber === 1) {
+            if (isDataVisible1) {
+                jsonDataDiv.innerHTML = ''; // Очистка данных
+                isDataVisible1 = false; 
+            } else {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        jsonDataDiv.innerHTML = ''; // Очистка предыдущих данных
+
+                        const message = document.createElement('p');
+                        message.textContent = `Message: ${data.message}`;
+                        jsonDataDiv.appendChild(message);
+
+                        const status = document.createElement('p');
+                        status.textContent = `Status: ${data.status}`;
+                        jsonDataDiv.appendChild(status);
+
+                        const itemsList = document.createElement('ul');
+                        data.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = `Item: ${item}`;
+                            itemsList.appendChild(listItem);
+                        });
+                        jsonDataDiv.appendChild(itemsList);
+
+                        isDataVisible1 = true; 
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }
+        } else if (setNumber === 2) {
+            if (isDataVisible2) {
+                jsonDataDiv.innerHTML = ''; // Очистка данных
+                isDataVisible2 = false; 
+            } else {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        jsonDataDiv.innerHTML = ''; // Очистка предыдущих данных
+
+                        const message = document.createElement('p');
+                        message.textContent = `Message: ${data.message}`;
+                        jsonDataDiv.appendChild(message);
+
+                        const status = document.createElement('p');
+                        status.textContent = `Status: ${data.status}`;
+                        jsonDataDiv.appendChild(status);
+
+                        const itemsList = document.createElement('ul');
+                        data.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = `Item: ${item}`;
+                            itemsList.appendChild(listItem);
+                        });
+                        jsonDataDiv.appendChild(itemsList);
+
+                        isDataVisible2 = true; 
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }
+        } else if (setNumber === 3) {
+            if (isDataVisible3) {
+                jsonDataDiv.innerHTML = ''; // Очистка данных
+                isDataVisible3 = false; 
+            } else {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        jsonDataDiv.innerHTML = ''; // Очистка предыдущих данных
+
+                        const message = document.createElement('p');
+                        message.textContent = `Message: ${data.message}`;
+                        jsonDataDiv.appendChild(message);
+
+                        const status = document.createElement('p');
+                        status.textContent = `Status: ${data.status}`;
+                        jsonDataDiv.appendChild(status);
+
+                        const itemsList = document.createElement('ul');
+                        data.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = `Item: ${item}`;
+                            itemsList.appendChild(listItem);
+                        });
+                        jsonDataDiv.appendChild(itemsList);
+
+                        isDataVisible3 = true; 
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }
+        }
+    }
+
+    document.getElementById('fetch-data1').addEventListener('click', function() {
+        fetchData('/api/data1', 1);
+    });
+
+    document.getElementById('fetch-data2').addEventListener('click', function() {
+        fetchData('/api/data2', 2);
+    });
+
+    document.getElementById('fetch-data3').addEventListener('click', function() {
+        fetchData('/api/data3', 3);
+    });
+</script>
+
+</body>
+</html>
