@@ -1,0 +1,57 @@
+p {
+	color: orange;
+	width: 300px;
+	text-align: right;
+	font-size: 30px;
+	font-family: Courier New; /* Задание 7, применение шрифта к параметрам страницы */
+	line-height: 0.5; /* Задание 8, работа с отступами между строчками */
+	text-indent: 10px; /* Задание 10, работа с красной строкой */ 
+}
+
+h1 {
+	color: green;
+	font-size: 50px;
+	text-align: center;
+	font-family: Georgia;
+	text-decoration: underline; /* Задание 11, подчеркивания*/
+}
+
+h2 {
+	color: blue;
+	font-style: italic;
+	font-size: 40px;
+	font-weight: normal;
+	font-family: Verdana;
+	text-decoration: overline; /* Задание 12, надчеркивания*/
+}
+
+h3 {
+	color: red;
+	font-family: Trebuchet MS;
+	text-decoration: line-through; /* Задание 13, зачеркивания*/
+}
+
+h4 {
+	color: #5595c0;
+	font-family: Impact;
+}
+
+td {
+	width: 500px;
+	height: 300px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial rgb(122, 33, 33);
+}
+
+th {
+	font-weight: normal;
+	width: 500px;
+	height: 300px;
+	text-align: left;
+	font-family: Comic Sans MS;
+}
+
+a {
+	text-decoration: none; /* Задание 14, убирание подчеркивания*/
+}

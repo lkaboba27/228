@@ -1,0 +1,184 @@
+h1, h2, h3  {
+	text-align: center; /* Задание 1, сокращение одинаковых параметров в css */
+}
+
+h2, h3 {
+	color: blue; /* Задание 2, здесь показанна работа с сокращениями и то, что не похожие параметры можно просто оставить */
+}
+h3 {
+	font-size: 16px;
+}
+
+ul li i {
+	color: red; /* Задание 3, обозначение конкретного пути пренадлежности парамаетров */ 
+}
+
+p i {
+	color: green;
+}
+
+p b i {
+	color:red
+}
+
+li > b { 
+	color:rgb(0, 255, 115); /* Задание 4, обозначение дочернего селектора */
+}
+
+.odd { 
+	color: red; /* Задание 5, оюозанечение классов */
+}
+
+.eve {
+	color: green;
+}
+
+.eee {
+	color: #ff0000;
+}
+
+.xxx {
+	font-size: 30px; /* Задние 6, работа со span */
+}
+
+.block1 { 
+	color: #ff0000; /* Задание 7, работа с div */ 
+}
+
+.block2 {
+	color: #15ff00;
+}
+
+.block3 {
+	color: #1100ff;
+}
+
+.block4 {
+	color: red;
+}
+
+.block5 {
+	color: rgb(43, 255, 0);
+}
+
+.header {
+	color: red;
+}
+
+h2.header {
+	font-size: 40px; /* Задание 9  Работа с тегом с заданным классом  */
+}
+
+h3.header {
+	font-size: 30px;
+}
+
+.eee i {
+	color: red; /* Задание 10 Селектор потомков и классы */
+}
+
+.success {
+	color: green; /* Задание 11 Элемент с несколькими CSS классами */
+}
+.error {
+	color: red;
+}
+.large {
+	font-size: 30px;
+}
+.small {
+	font-size: 20px;
+}
+
+.someone {
+	color: #e5a6e7;
+	text-align: right;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#elem1 {
+	color: #ff0000; /* Задание 12 Выбор элемента по уникальному id */
+}
+
+#elem2 {
+	color: #3cff00;
+}
+
+#elem3 {
+	color: #00e1ff;
+}
+
+#block {
+	color: #305a5f; /* Задание 13 Селектор по id и CSS классы */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text {
+	text-align: center; /* Задание 14 Использование id */
+	font-size: 20px;
+}
+
+#elem h2 {
+	color: #ff0000; 
+}
+
+#elem .text {
+	color: #ff0000;
+}
+
+#elem li.text {
+	color: #ff0000;
+}
+
+.eee.zzz.ccc {
+	color: #00ff22; /* Задание 15 Выбор элемента по нескольким классам */
+}
+
+.bbb.zzz {
+	color: rgb(131, 36, 36); /* Задание 16 Несколько селекторов слитно */
+}
+
+h2.bbb.zzz {
+	color: rgb(184, 96, 96);
+}
+
+#elem.bbb {
+	color: red;
+}
+
+#elem.bbb.zzz {
+	color: rgb(46, 5, 5);
+}
+
+h2#elem.bbb {
+	color: rgb(59, 47, 47);
+}
+
+h2.zzz {
+	color: #a6ff00; /* Ошибка при использовании несколько (убейте меня) */
+}
+h2 .zzz {
+	color: #6b971a;
+}
+.bbb .zzz {
+	color: #adbe13;
+}
+.bbb.zzz.xxx {
+	color: #526312;
+}
+.bbb .zzz.xxx {
+	color: #4a583d;
+}
+.bbb.zzz .xxx {
+	color: #237019;
+}
+.bbb .zzz .xxx {
+	color: #3e613e;
+}
+#elem.bbb {
+	color: #35f0a2;
+}
+#elem .bbb {
+	color: #415a46;
+}
+
